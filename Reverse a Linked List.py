@@ -6,7 +6,7 @@ def reverseRecursively(head):
     if (head == None or  head.next == None):
          return head
     
-    tmp =  reverse(head.next)
+    tmp =  reverseRecursively(head.next)
     head.next.next = head
     head.next = None
     return tmp
